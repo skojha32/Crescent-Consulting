@@ -1,0 +1,139 @@
+
+.coverbg {
+    @include coverbg;
+}
+
+.mx-auto {
+	margin: 0 auto;
+}
+
+.align-center {
+	@include align-center;
+
+	&:before, &:after {
+    	content: none;
+    }
+}
+
+.align-center-h {
+	@include align-center('horizontal');
+
+	&:before, &:after {
+    	content: none;
+    }
+}
+
+.align-center-v {
+	height: 100%;
+	@include align-center('vertical');
+
+	&:before, &:after {
+    	content: none;
+    }
+}
+
+.align-center-v-b {
+	height: 100%;
+	@include align-center('bottom');
+
+	&:before, &:after {
+    	content: none;
+    }
+}
+
+.justify-content-center {
+	justify-content: center!important;
+    display: flex;
+    flex-wrap: wrap;
+
+    &:before, &:after {
+    	content: none;
+    }
+}
+
+.eq-height {
+	display: flex;
+	flex-wrap: wrap;
+
+	&:before, &:after {
+    	content: none;
+    }
+}
+
+//5
+.owl-theme {
+	.owl-dots {
+		.owl-dot span {
+			width: 35px;
+			height: 7px;
+			border-radius: 5px;
+		}
+		.active{
+			span{
+				background: $second-color !important;
+			}
+		}
+		.owl-dot:hover span {
+			background: $second-color !important;
+		}
+	}
+}
+
+.why__wrapper{
+	p{
+		font-family: $body-font;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 26px;
+	}
+	ul{
+		li{
+			font-family: $text-font;
+			margin: 20px 0px;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 26px;
+			padding-left: 30px;
+			position: relative;
+			&::after{
+				content: '\f336';
+				font-family: $fa;
+				color: $second-color;
+				clear: both;
+				left: 0;
+				top: 0;
+				position: absolute;
+				display: block;
+				font-weight: 900;
+				font-size: 25px;
+			}
+		}
+	}
+	.single-fun-fact{
+		h3{
+			font-family: $text-font;
+			font-style: normal;
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 100%;
+			color: $title-color-2;
+			margin-bottom: 10px;
+		}
+		p{
+			font-family: $text-font;
+			font-style: normal;
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 100%;
+		}
+	}
+}
+
+.tab-content {
+	display: none;
+}
+.tab-content.active {
+	display: block;
+}
